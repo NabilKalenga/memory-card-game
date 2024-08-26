@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}
+.navbar {
+    position: fixed; /* Fixes the navbar position relative to the viewport */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Position at the left of the viewport */
+    width: 100%; /* Full width */
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 0; /* Padding for spacing */
+    z-index: 1000; /* Higher z-index to ensure it stays on top */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for better separation */
+}
+
+.navbar a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Spacing around the links */
+    display: inline-block; /* Makes padding work properly */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and color */
+}
+.navbar a:hover {
+    background-color: #575757; /* Background color on hover */
+    color: #ffeb3b; /* Text color on hover */
+    border-radius: 4px; /* Optional: Adds rounded corners on hover */
+}
+
+
+ul{
+    display:block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.button{
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: center;
+    cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    width: 440px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: relative;
+    width: 100px;
+    height: 100px;
+  
+    font-size: 3em;
+    background-color: #fff;
+  
+    border-radius: 12px;
+  
+    box-shadow: 0px 4px 50px -5px rgba(0, 0, 0, 0.15);
+    transform: rotateY(180deg);
+    transition: 0.35s;
+  }
+  .card.open {
+    transform: rotateY(0deg);
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  
+    background-color: blue;
+    border-radius: 12px;
+    background: linear-gradient(138deg, #f90716 0%, #ffca03 100%);
+  
+    transition: 0.45s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+  }
+  .card.open {
+    transform: rotateY(0deg);
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  
+    background-color: blue;
+    border-radius: 12px;
+    background: linear-gradient(138deg, #07e9f9 0%, #03ff68 100%);
+  
+    transition: 0.45s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+  }
+  .open::after,
+  .match::after {
+    transform: rotateY(180deg);
+  }
+  .match::after {
+    animation-duration: 0.5s;
+  }
+  
+  .animate__shakeX {
+    animation-duration: 0.7s;
+  }
+  .btn {
+    margin-top: 28px;
+    padding: 11px 24px;
+    border-radius: 12px;
+  
+    border: 2px solid #06d0ef;
+    background-color: transparent;
+    color: #343434;
+  
+    font-weight: 500;
+    font-size: 16px;
+  
+    cursor: pointer;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn:hover {
+    background-color: #09e4ec;
+    color: #ffffff;
+  }
+  
+  .alertify-notifier.ajs-right .ajs-message.ajs-visible {
+    border-radius: 10px;
+  }
+  .alertify-notifier .ajs-message.ajs-success {
+    background: #04f7eb;
+    color: #fff;
+  }
+  
+  
+  
+  
+  
